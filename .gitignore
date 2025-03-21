@@ -13,3 +13,9 @@ NB_Platform/local_settings.py
 
 web/migrations/*
 !web/migrations/__init__.py
+
+# 忽略所有 __pycache__ 目录
+__pycache__/
+
+# 忽略所有 .pyc 文件
+*.pyc

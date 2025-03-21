@@ -798,3 +798,9 @@ django.db.utils.OperationalError: (1054, "Unknown column 'web_loginlog.map_locat
 2025-03-22 07:11:22 - django.server - INFO - "GET /my/transaction/list/ HTTP/1.1" 200 9248
 2025-03-22 07:12:42 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\models.py changed, reloading.
 2025-03-22 07:12:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-22 07:13:05 - django.server - INFO - "GET /logout/ HTTP/1.1" 302 0
+2025-03-22 07:13:05 - django.server - INFO - "GET /login/ HTTP/1.1" 200 2116
+2025-03-22 07:13:14 - django.server - INFO - "POST /login/ HTTP/1.1" 302 0
+2025-03-22 07:13:14 - django.server - INFO - "GET /home/ HTTP/1.1" 200 2512
+2025-03-22 07:13:15 - django.server - INFO - "GET /my/transaction/list/ HTTP/1.1" 200 9248
+2025-03-22 07:13:20 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 15506
