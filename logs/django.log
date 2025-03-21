@@ -645,3 +645,4 @@ AttributeError: 'WSGIRequest' object has no attribute 'client_info'
 2025-03-21 15:22:41 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2025-03-21 16:38:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2025-03-22 04:19:56 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\NB_Platform\settings.py changed, reloading.
+2025-03-22 04:19:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

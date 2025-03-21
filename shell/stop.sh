@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 定义配置文件名
-CONFIG_FILE="uwsgi_day06.ini"
+CONFIG_FILE="uwsgi.ini"
 
 # 定义颜色代码
 RED='\033[31m'

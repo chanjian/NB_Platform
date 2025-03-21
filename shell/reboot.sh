@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 配置参数
-CONFIG_FILE="uwsgi_day06.ini"  # uWSGI 配置文件
+CONFIG_FILE="uwsgi.ini"  # uWSGI 配置文件
 LOG_FILE="uwsgi.log"           # 日志文件
 UWSGI_PATH="/envs/day06/bin/uwsgi"  # uWSGI 路径
 
