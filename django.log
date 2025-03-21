@@ -1,0 +1,53 @@
+2025-03-20 19:00:25 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:04:18 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\NB_Platform\urls.py changed, reloading.
+2025-03-20 19:04:19 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:05:17 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:05:30 - django.server - INFO - "GET /upload/list1/ HTTP/1.1" 200 4782
+2025-03-20 19:05:31 - django.request - WARNING - Not Found: /client-info/
+2025-03-20 19:05:31 - django.server - WARNING - "POST /client-info/ HTTP/1.1" 404 7123
+2025-03-20 19:05:41 - django.server - INFO - "GET /logging_module/pratice/settings/ HTTP/1.1" 200 1
+2025-03-20 19:06:08 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\logging_module.py changed, reloading.
+2025-03-20 19:06:08 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:06:11 - django.server - INFO - "GET /logging_module/pratice/settings/ HTTP/1.1" 200 1
+2025-03-20 19:06:38 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\logging_module.py changed, reloading.
+2025-03-20 19:06:38 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:06:40 - django.server - INFO - "GET /upload/list1/ HTTP/1.1" 200 4782
+2025-03-20 19:06:41 - django.request - WARNING - Not Found: /client-info/
+2025-03-20 19:06:41 - django.server - WARNING - "POST /client-info/ HTTP/1.1" 404 7123
+2025-03-20 19:06:42 - django.server - INFO - "GET /logging_module/pratice/settings/ HTTP/1.1" 200 1
+2025-03-20 19:09:41 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\logging_module.py changed, reloading.
+2025-03-20 19:09:42 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:09:51 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\logging_module.py changed, reloading.
+2025-03-20 19:09:52 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:09:59 - django.request - WARNING - Not Found: /client-info/
+2025-03-20 19:09:59 - django.server - WARNING - "POST /client-info/ HTTP/1.1" 404 7123
+2025-03-20 19:10:00 - django.server - INFO - "GET /logging_module/pratice/settings/ HTTP/1.1" 200 1
+2025-03-20 19:14:51 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\NB_Platform\settings.py changed, reloading.
+2025-03-20 19:14:51 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:15:13 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\NB_Platform\settings.py changed, reloading.
+2025-03-20 19:15:13 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:15:19 - django.request - WARNING - Not Found: /client-info/
+2025-03-20 19:15:19 - django.server - WARNING - "POST /client-info/ HTTP/1.1" 404 7123
+2025-03-20 19:15:19 - django.server - INFO - "GET /upload/list1/ HTTP/1.1" 200 4782
+2025-03-20 19:15:20 - django.request - WARNING - Not Found: /client-info/
+2025-03-20 19:15:20 - django.server - WARNING - "POST /client-info/ HTTP/1.1" 404 7123
+2025-03-20 19:15:24 - web - INFO - This is an info message.
+2025-03-20 19:15:24 - web - WARNING - This is a warning message.
+2025-03-20 19:15:24 - web - ERROR - This is an error message.
+2025-03-20 19:15:24 - web - CRITICAL - This is a critical message.
+2025-03-20 19:15:24 - django.server - INFO - "GET /logging_module/pratice/settings/ HTTP/1.1" 200 1
+2025-03-20 19:25:53 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\NB_Platform\settings.py changed, reloading.
+2025-03-20 19:25:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-20 19:27:22 - django.request - WARNING - Not Found: /client-info/
+2025-03-20 19:27:22 - django.server - WARNING - "POST /client-info/ HTTP/1.1" 404 7123
+2025-03-20 19:27:24 - web - INFO - This is an info message.
+2025-03-20 19:27:24 - web - WARNING - This is a warning message.
+2025-03-20 19:27:24 - web - ERROR - This is an error message.
+2025-03-20 19:27:24 - web - CRITICAL - This is a critical message.
+2025-03-20 19:27:24 - django.server - INFO - "GET /logging_module/pratice/settings/ HTTP/1.1" 200 1
+2025-03-20 19:27:56 - web - INFO - This is an info message.
+2025-03-20 19:27:56 - web - WARNING - This is a warning message.
+2025-03-20 19:27:56 - web - ERROR - This is an error message.
+2025-03-20 19:27:56 - web - CRITICAL - This is a critical message.
+2025-03-20 19:27:56 - django.server - INFO - "GET /logging_module/pratice/settings/ HTTP/1.1" 200 1
+2025-03-20 19:31:04 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\NB_Platform\settings.py changed, reloading.
