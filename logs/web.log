@@ -497,3 +497,50 @@ django.db.utils.IntegrityError: (1048, "Column 'login_city' cannot be null")
 2025-03-21 14:17:35 - web - WARNING - This is a warning message.
 2025-03-21 14:17:35 - web - ERROR - This is an error message.
 2025-03-21 14:17:35 - web - CRITICAL - This is a critical message.
+2025-03-22 06:49:43 - web - ERROR - Failed to save login log: 'str' object has no attribute 'META'
+Traceback (most recent call last):
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\account.py", line 54, in login
+    geo_data = GeoIPService.get_location(ip)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 162, in get_location
+    ip = GeoIPService.get_client_ip(request)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 188, in get_client_ip
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+AttributeError: 'str' object has no attribute 'META'
+2025-03-22 06:53:21 - web - ERROR - Failed to save login log: 'str' object has no attribute 'META'
+Traceback (most recent call last):
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\account.py", line 54, in login
+    geo_data = GeoIPService.get_location(ip)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 162, in get_location
+    ip = GeoIPService.get_client_ip(request)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 188, in get_client_ip
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+AttributeError: 'str' object has no attribute 'META'
+2025-03-22 06:57:14 - web - ERROR - Failed to save login log: 'str' object has no attribute 'META'
+Traceback (most recent call last):
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\account.py", line 54, in login
+    geo_data = GeoIPService.get_location(ip)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 162, in get_location
+    ip = GeoIPService.get_client_ip(request)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 188, in get_client_ip
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+AttributeError: 'str' object has no attribute 'META'
+2025-03-22 07:08:39 - web - ERROR - Failed to save login log: 'str' object has no attribute 'META'
+Traceback (most recent call last):
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\account.py", line 54, in login
+    geo_data = GeoIPService.get_location(ip)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 219, in get_location
+    ip = GeoIPService.get_client_ip(request)  # 获取客户端 IP
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\utils\info\geoip_providers.py", line 207, in get_client_ip
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+AttributeError: 'str' object has no attribute 'META'
+2025-03-22 07:11:21 - web - ERROR - Failed to save login log: LoginLog() got an unexpected keyword argument 'exact_address'
+Traceback (most recent call last):
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\account.py", line 153, in login
+    login_log = models.LoginLog.objects.create(
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\models\query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\models\base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: LoginLog() got an unexpected keyword argument 'exact_address'

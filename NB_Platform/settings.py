@@ -377,7 +377,7 @@ LOGGING = {
 }
 
 
-try:
-    from NB_Platform.local_settings import *
-except Exception:
-    pass
+# try:
+#     from NB_Platform.local_settings import *
+# except Exception:
+#     pass

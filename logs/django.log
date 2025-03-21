@@ -646,3 +646,155 @@ AttributeError: 'WSGIRequest' object has no attribute 'client_info'
 2025-03-21 16:38:54 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2025-03-22 04:19:56 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\NB_Platform\settings.py changed, reloading.
 2025-03-22 04:19:56 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-22 06:48:53 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-22 06:49:18 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-22 06:49:26 - django.request - WARNING - Not Found: /
+2025-03-22 06:49:26 - django.server - WARNING - "GET / HTTP/1.1" 404 7093
+2025-03-22 06:49:34 - django.server - INFO - "GET /login/ HTTP/1.1" 200 2116
+2025-03-22 06:49:43 - django.server - INFO - "POST /login/ HTTP/1.1" 302 0
+2025-03-22 06:49:43 - django.server - INFO - "GET /home/ HTTP/1.1" 200 3970
+2025-03-22 06:49:43 - django.server - INFO - "GET /static/css/commons.css HTTP/1.1" 304 0
+2025-03-22 06:49:45 - django.server - INFO - "GET /customer/list/ HTTP/1.1" 200 16745
+2025-03-22 06:49:51 - django.server - INFO - "GET /customer/list/ HTTP/1.1" 200 16745
+2025-03-22 06:49:51 - django.server - INFO - "GET /static/css/commons.css HTTP/1.1" 304 0
+2025-03-22 06:49:51 - django.server - INFO - "GET /static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+2025-03-22 06:49:56 - django.server - INFO - "GET /logout/ HTTP/1.1" 302 0
+2025-03-22 06:49:56 - django.server - INFO - "GET /login/ HTTP/1.1" 200 2116
+2025-03-22 06:50:01 - django.server - INFO - "GET /customer/list/?page=2 HTTP/1.1" 200 10522
+2025-03-22 06:50:03 - django.request - ERROR - Internal Server Error: /customer/login/log/16/
+Traceback (most recent call last):
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 825, in _read_query_result
+    result.read()
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'web_loginlog.map_location' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\views\customer.py", line 287, in customer_login_log
+    return render(request,'customer_login_log.html',locals())
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\template\defaulttags.py", line 168, in render
+    len_values = len(values)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\models\sql\compiler.py", line 1169, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 825, in _read_query_result
+    result.read()
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\venvs\lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'web_loginlog.map_location' in 'field list'")
+2025-03-22 06:50:03 - django.server - ERROR - "GET /customer/login/log/16/ HTTP/1.1" 500 304941
+2025-03-22 06:53:02 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-22 06:53:21 - django.server - INFO - "POST /login/ HTTP/1.1" 302 0
+2025-03-22 06:53:21 - django.server - INFO - "GET /home/ HTTP/1.1" 200 2512
+2025-03-22 06:53:22 - django.server - INFO - "GET /my/transaction/list/ HTTP/1.1" 200 9248
+2025-03-22 06:53:32 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 14855
+2025-03-22 06:56:21 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 15085
+2025-03-22 06:57:03 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 2512
+2025-03-22 06:57:03 - django.server - INFO - "GET /static/css/commons.css HTTP/1.1" 304 0
+2025-03-22 06:57:03 - django.request - WARNING - Not Found: /favicon.ico
+2025-03-22 06:57:03 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 7144
+2025-03-22 06:57:07 - django.server - INFO - "GET /logout/ HTTP/1.1" 302 0
+2025-03-22 06:57:07 - django.server - INFO - "GET /login/ HTTP/1.1" 200 2116
+2025-03-22 06:57:14 - django.server - INFO - "POST /login/ HTTP/1.1" 302 0
+2025-03-22 06:57:14 - django.server - INFO - "GET /home/ HTTP/1.1" 200 2512
+2025-03-22 06:57:15 - django.server - INFO - "GET /my/order/list/ HTTP/1.1" 200 4604
+2025-03-22 06:57:15 - django.server - INFO - "GET /my/transaction/list/ HTTP/1.1" 200 9248
+2025-03-22 06:57:19 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 15085
+2025-03-22 06:57:20 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 15085
+2025-03-22 06:57:20 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 15085
+2025-03-22 07:08:14 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-22 07:08:32 - django.server - INFO - "GET /logout/ HTTP/1.1" 302 0
+2025-03-22 07:08:32 - django.server - INFO - "GET /login/ HTTP/1.1" 200 2116
+2025-03-22 07:08:39 - django.server - INFO - "POST /login/ HTTP/1.1" 302 0
+2025-03-22 07:08:39 - django.server - INFO - "GET /home/ HTTP/1.1" 200 2512
+2025-03-22 07:08:40 - django.server - INFO - "GET /my/transaction/list/ HTTP/1.1" 200 9248
+2025-03-22 07:08:43 - django.server - INFO - "GET /customer/login/log/16/ HTTP/1.1" 200 15085
+2025-03-22 07:11:07 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-03-22 07:11:13 - django.server - INFO - "GET /logout/ HTTP/1.1" 302 0
+2025-03-22 07:11:13 - django.server - INFO - "GET /login/ HTTP/1.1" 200 2116
+2025-03-22 07:11:21 - django.server - INFO - "POST /login/ HTTP/1.1" 302 0
+2025-03-22 07:11:21 - django.server - INFO - "GET /home/ HTTP/1.1" 200 2512
+2025-03-22 07:11:22 - django.server - INFO - "GET /my/transaction/list/ HTTP/1.1" 200 9248
+2025-03-22 07:12:42 - django.utils.autoreload - INFO - D:\Python_Project\WuPeiQi_Project\Django项目实战&源码分析班\NB_Platform\web\models.py changed, reloading.
+2025-03-22 07:12:43 - django.utils.autoreload - INFO - Watching for file changes with StatReloader

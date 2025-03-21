@@ -20,7 +20,7 @@ class LoginLog(models.Model):
     login_os = models.CharField(verbose_name="操作系统", max_length=64,null=True,blank=True)
     login_browser = models.CharField(verbose_name="浏览器名称", max_length=64,null=True,blank=True)
     map_location = models.CharField(verbose_name="地图定位", max_length=64,null=True,blank=True)
-    exact_adress = models.CharField(verbose_name="精确地址", max_length=64,null=True,blank=True)
+    exact_address = models.CharField(verbose_name="精确地址", max_length=64,null=True,blank=True)
     # 关联管理员（可以为空）
     administrator = models.ForeignKey(
         verbose_name="管理员",

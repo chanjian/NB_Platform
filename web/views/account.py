@@ -11,27 +11,103 @@ from utils.info.geoip_providers import GeoIPService
 import logging
 logger = logging.getLogger('web')
 
+# def login(request):
+#     if request.method == "GET":
+#         form = LoginForm()
+#         return render(request, "login.html",{'form':form})
+#
+#     # 1.接收并获取数据(数据格式或是否为空验证 - Form组件 & ModelForm组件）
+#
+#     form = LoginForm(data=request.POST)
+#     if not form.is_valid():
+#         return render(request, "login.html", {'form': form})
+#     print(form.cleaned_data)
+#     # role = request.POST.get("role")
+#     # username = request.POST.get("username")
+#     # password = request.POST.get("password")
+#     data_dict = form.cleaned_data
+#     role = data_dict.pop('role')
+#
+#     # 2.去数据库校验  1管理员  2客户
+#     mapping = {"1": "ADMIN", "2": "CUSTOMER"}
+#     if role not in mapping:
+#         return render(request, "login.html", {'form':form,'error': "角色不存在"})
+#
+#     if role == "1":
+#         user_object = models.Administrator.objects.filter(active=1).filter(**data_dict).first()
+#     else:
+#         user_object = models.Customer.objects.filter(active=1).filter(**data_dict).first()
+#
+#     # 2.1 校验失败
+#     if not user_object:
+#         return render(request, "login.html", {'form':form,'error': "用户名或密码错误"})
+#
+#     # 2.2 校验成功，用户信息写入session+进入项目后台
+#     request.session[settings.NB_SESSION_KEY] = {'role': mapping[role], 'name': user_object.username, 'id': user_object.id}
+#
+#     # 3. 获取客户端信息并保存到 LoginLog
+#     try:
+#         # 获取客户端 IP 地址
+#         ip = GeoIPService.get_client_ip(request)
+#
+#         # 获取地理位置信息
+#         geo_data = GeoIPService.get_location(ip)
+#         if 'error' not in geo_data:
+#             # 从多个服务商数据中融合城市信息
+#             login_city = geo_data.get('city', '未知')
+#             login_province = geo_data.get('region', '未知')
+#             map_location = geo_data.get('baidu_map_url', '未知')
+#             exact_address = geo_data.get('exact_address', '未知')
+#         else:
+#             login_city = '未知'
+#             login_province = '未知'
+#             map_location = '未知'
+#             exact_address = '未知'
+#
+#         # 获取设备信息
+#         device_info = DeviceDetector.get_advanced_device_info(request)
+#         login_device_type = device_info['device']['type']  # 使用设备类型
+#         login_os = device_info['os']['family']
+#         login_browser = device_info['browser']['family']
+#
+#
+#         # 创建 LoginLog 记录
+#         models.LoginLog.objects.create(
+#             login_ip=ip,
+#             login_city=login_city,
+#             login_province=login_province,
+#             login_device_type=login_device_type,
+#             login_os=login_os,
+#             login_browser=login_browser,
+#             map_location=map_location,
+#             exact_address=exact_address,
+#             administrator=user_object if role == "1" else None,
+#             customer=user_object if role == "2" else None,
+#         )
+#
+#
+#     except Exception as e:
+#         logger.error("Failed to save login log: %s", str(e), exc_info=True)
+#
+#     return redirect("/home/")
+
 def login(request):
     if request.method == "GET":
         form = LoginForm()
-        return render(request, "login.html",{'form':form})
+        return render(request, "login.html", {'form': form})
 
-    # 1.接收并获取数据(数据格式或是否为空验证 - Form组件 & ModelForm组件）
-
+    # 1. 接收并获取数据（数据格式或是否为空验证 - Form 组件 & ModelForm 组件）
     form = LoginForm(data=request.POST)
     if not form.is_valid():
         return render(request, "login.html", {'form': form})
-    print(form.cleaned_data)
-    # role = request.POST.get("role")
-    # username = request.POST.get("username")
-    # password = request.POST.get("password")
+
     data_dict = form.cleaned_data
     role = data_dict.pop('role')
 
-    # 2.去数据库校验  1管理员  2客户
+    # 2. 去数据库校验：1管理员，2客户
     mapping = {"1": "ADMIN", "2": "CUSTOMER"}
     if role not in mapping:
-        return render(request, "login.html", {'form':form,'error': "角色不存在"})
+        return render(request, "login.html", {'form': form, 'error': "角色不存在"})
 
     if role == "1":
         user_object = models.Administrator.objects.filter(active=1).filter(**data_dict).first()
@@ -40,18 +116,20 @@ def login(request):
 
     # 2.1 校验失败
     if not user_object:
-        return render(request, "login.html", {'form':form,'error': "用户名或密码错误"})
+        return render(request, "login.html", {'form': form, 'error': "用户名或密码错误"})
 
-    # 2.2 校验成功，用户信息写入session+进入项目后台
+    # 2.2 校验成功，用户信息写入 session + 进入项目后台
     request.session[settings.NB_SESSION_KEY] = {'role': mapping[role], 'name': user_object.username, 'id': user_object.id}
 
     # 3. 获取客户端信息并保存到 LoginLog
     try:
         # 获取客户端 IP 地址
         ip = GeoIPService.get_client_ip(request)
+        print(f"IP: {ip}")  # 调试
 
         # 获取地理位置信息
-        geo_data = GeoIPService.get_location(ip)
+        geo_data = GeoIPService.get_location(request)  # 传递 request 对象
+        print(f"Geo Data: {geo_data}")  # 调试
         if 'error' not in geo_data:
             # 从多个服务商数据中融合城市信息
             login_city = geo_data.get('city', '未知')
@@ -66,13 +144,13 @@ def login(request):
 
         # 获取设备信息
         device_info = DeviceDetector.get_advanced_device_info(request)
+        print(f"Device Info: {device_info}")  # 调试
         login_device_type = device_info['device']['type']  # 使用设备类型
         login_os = device_info['os']['family']
         login_browser = device_info['browser']['family']
 
-
         # 创建 LoginLog 记录
-        models.LoginLog.objects.create(
+        login_log = models.LoginLog.objects.create(
             login_ip=ip,
             login_city=login_city,
             login_province=login_province,
@@ -84,10 +162,11 @@ def login(request):
             administrator=user_object if role == "1" else None,
             customer=user_object if role == "2" else None,
         )
-
+        print(f"Login Log Created: {login_log.id}")  # 调试
 
     except Exception as e:
         logger.error("Failed to save login log: %s", str(e), exc_info=True)
+        print(f"Error: {e}")  # 调试
 
     return redirect("/home/")
 
